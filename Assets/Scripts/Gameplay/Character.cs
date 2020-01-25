@@ -6,7 +6,7 @@ using TMPro;
 public class Character : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI characterHolder;
-    [SerializeField] private char letter;
+    [SerializeField] private string letter;
     [SerializeField] private Vector3 stationPos;
 
     private bool isHeld = false;
@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
     private Cargo cargo;
 
     public Vector3 StationPos { get => stationPos; set => stationPos = value; }
-    public char Letter { get => letter; set => letter = value; }
+    public string Letter { get => letter; set => letter = value; }
     public bool IsOccupying { get => isOccupying; set => isOccupying = value; }
     public Vector3 CargoPos { get => cargoPos; set => cargoPos = value; }
     public Cargo Cargo { get => cargo; set => cargo = value; }

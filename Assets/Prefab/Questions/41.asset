@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d83be6f8dce081ab12e2095c27c0c9, type: 3}
+  m_Name: 41
+  m_EditorClassIdentifier: 
+  question: "Kota ini adalah kota terbesar di China selatan, lokasinya terletak di
+    tepi utara Sungai Mutiara. Kota ini merupakan kota terbesar di dunia di awal abad
+    ke-19. Penduduknya yang berpendidikan tinggi selalu aktif dalam kegiatan politik,
+    terlibat dalam\_<u>Kebangkitan Kanton 1911</u>\_yang mengarah pada\_<u>Revolusi
+    China</u>\_menentang\_<u>Dinasti Manchu</u>.\nApakah nama dari kota tersebut ?"
+  wrongAnswers:
+  - Tianjin
+  - Shanghai
+  - Wuhan
+  correctAnswer: Guangzhou

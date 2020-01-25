@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d83be6f8dce081ab12e2095c27c0c9, type: 3}
+  m_Name: 37
+  m_EditorClassIdentifier: 
+  question: "Mayoritas penduduk Guangzhou memiliki bahasa mayoritasnya sendiri, bahasa
+    ini adalah salah satu dari dialek\_<u>bahasa China Yue</u>\_yang dituturkan di\_<u>Guangdong</u>\_dan
+    sekitarnya di\_China\_selatan,\_seperti <u>Hong Kong</u>,\_<u>Makau</u>, masyarakat
+    keturunan\_ China di\_<u>Asia Tenggara</u>\_dan juga masyarakat China di belahan
+    dunia lain. Bahasa tersebut adalah..."
+  wrongAnswers:
+  - Bahasa Min
+  - Bahasa Hakka
+  - Bahasa Hasiang
+  correctAnswer: Bahasa Min

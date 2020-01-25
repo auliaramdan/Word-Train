@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d83be6f8dce081ab12e2095c27c0c9, type: 3}
+  m_Name: 15
+  m_EditorClassIdentifier: 
+  question: 'Model kuncir rambut ini menjadi ciri khas orang China yang berintergasi
+    ke seluruh dunia sebelum Dinasti Qing. Model rambut ini mencukur semua rambut
+    di setengah bagian kepala dan menyisihkan yang dibelakang untuk dikuncir merupakan
+    model
+
+    kunciran yang bernama . . .'
+  wrongAnswers:
+  - Curly Hair
+  - Keriting Gantung
+  - Scraft Bun
+  correctAnswer: Taucang

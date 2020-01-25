@@ -43,15 +43,22 @@ public class MenuInput : MonoBehaviour
         panelStack.Push(activated);
         activeObject = (GameObject)panelStack.Peek();
         activeObject.SetActive(true);
-        Debug.Log(activeObject);
+       // activeObject = (GameObject)panelStack.Peek();
+        if(activeObject.GetComponent<Animator>() != null) {
+            activeObject.GetComponent<Animator>().SetBool("Open", true);
+        }      
+        //Debug.Log(activeObject);
     }
 
     public void ActivateOnly(GameObject activated) {
         //activeObject.SetActive(false);
         panelStack.Push(activated);
         activeObject = (GameObject)panelStack.Peek();
-        activeObject.SetActive(true);
-        Debug.Log(activeObject);
+        if(activeObject.GetComponent<Animator>() != null) {
+            activeObject.GetComponent<Animator>().SetBool("Open", true);
+        }
+        //activeObject.SetActive(true);
+        //Debug.Log(activeObject);
     }
 
     public void Traceback(int count) {
@@ -72,10 +79,10 @@ public class MenuInput : MonoBehaviour
         {
             activeObject.GetComponent<Animator>().SetBool("Open", false);
         }
-        activeObject.SetActive(false);
+        //activeObject.SetActive(false);
         panelStack.Pop();
         activeObject = (GameObject)panelStack.Peek();         
-        activeObject.SetActive(true);
+        //activeObject.SetActive(true);
     }
 
     public void PushToStack(GameObject pushed)

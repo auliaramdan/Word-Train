@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d83be6f8dce081ab12e2095c27c0c9, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  id: 0
+  question: Festival Cap Go Meh jatuh pada hari terakhir dari masa perayaan tahun
+    baru imlek, dalam festival ini ada berbagai pertunjukan antara lain tarian barongsai,
+    atraksi beladiri, pagelaran musik tradisional China dan banyak lainnya. Jatuh
+    pada tanggal dan bulan berapakah festifal cap go meh ini dalam kalender China?
+  wrongAnswers:
+  - Tanggal 14 bulan 1 kalender China
+  - Tanggal 15 bulan 2 kalender China
+  - Tanggal 14 bulan 2 kalender China
+  correctAnswer: Tanggal 15 bulan 1 kalender China

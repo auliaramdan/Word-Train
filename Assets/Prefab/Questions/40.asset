@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d83be6f8dce081ab12e2095c27c0c9, type: 3}
+  m_Name: 40
+  m_EditorClassIdentifier: 
+  question: 'Danau ini adalah danau buatan dengan pulau terbanyak di daerah Chun''an,
+    daerah administrasi pemerintahan Hangzhou. Pulau-pulau ini memiliki ukuran dan
+    bentuk beragam, dan memiliki keindahan yang khas.
+
+    Apakah nama dari danau tersebut ?'
+  wrongAnswers:
+  - Danau Kanas
+  - Danau Qinghai
+  - Danau Namtso
+  correctAnswer: Danau Qiandao

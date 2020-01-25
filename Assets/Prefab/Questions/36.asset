@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d83be6f8dce081ab12e2095c27c0c9, type: 3}
+  m_Name: 36
+  m_EditorClassIdentifier: 
+  question: "Landmark kota Shanghai yang paling terkenal di mata dunia adalah sebuah
+    menara menjulang yang sempat menjadi menara tertinggi di dunia, Menara ini didesain
+    oleh\_<u>Jia Huan Cheng</u>\_dari\_<u>Shanghai Modern Architectural Design Co.
+    Ltd</u>.\_konstruksinya dimulai tahun\_<u>1991</u>\_dan selesai tahun\_<u>1995</u>.
+    \nNama menara tersebut adalah...."
+  wrongAnswers:
+  - China Zun
+  - Ping An International Finance Center
+  - Shanghai Tower
+  correctAnswer: Oriental Pearl Tower

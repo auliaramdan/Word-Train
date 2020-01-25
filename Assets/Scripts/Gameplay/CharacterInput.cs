@@ -23,7 +23,7 @@ public class CharacterInput : MonoBehaviour
         {
             Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            Debug.DrawRay(ray.origin, ray.direction * 10);
+            //Debug.DrawRay(ray.origin, ray.direction * 10);
             if(Physics.Raycast(ray, out hit, 100f))
             {
                 if (hit.collider.tag == "Character")
@@ -45,6 +45,7 @@ public class CharacterInput : MonoBehaviour
             {
                 isHolding = false;
                 heldCharacter.SetHeld(false);
+                heldCharacter = null;
             }
         }
 #endif
@@ -54,7 +55,7 @@ public class CharacterInput : MonoBehaviour
         {
             Ray ray = mainCam.ScreenPointToRay(Input.touches[0].position);
             RaycastHit hit;
-            Debug.DrawRay(ray.origin, ray.direction * 10);
+            //Debug.DrawRay(ray.origin, ray.direction * 10);
             if (Physics.Raycast(ray, out hit, 100f))
             {
                 if (hit.collider.tag == "Character")

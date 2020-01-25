@@ -5,15 +5,16 @@ using UnityEngine;
 public class Station : MonoBehaviour
 {
     [SerializeField] private List<Vector3> availablePositions = new List<Vector3>();
-    [SerializeField] private List<char> letters = new List<char>();
+    [SerializeField] private List<string> letters = new List<string>();
     [SerializeField] private List<GameObject> charGO = new List<GameObject>();
+    [SerializeField] private Level charList;
 
     // Start is called before the first frame update
     void Start()
     {
         int start = -6;
 
-        for (int i = 0; i < letters.Count; i++)
+        for (int i = 0; i < charList.charList.Count; i++)
         {            
             if(i%2 == 0)
             {
@@ -21,7 +22,7 @@ public class Station : MonoBehaviour
                 Character tempChar = charGO[i].GetComponent<Character>();
                 availablePositions.Add(tempPos);
                 tempChar.StationPos = tempPos;
-                tempChar.Letter = letters[i];
+                tempChar.Letter = charList.charList[i];
                 charGO[i].SetActive(true);
             }
             else
@@ -30,7 +31,7 @@ public class Station : MonoBehaviour
                 Character tempChar = charGO[i].GetComponent<Character>();
                 availablePositions.Add(tempPos);
                 tempChar.StationPos = tempPos;
-                tempChar.Letter = letters[i];
+                tempChar.Letter = charList.charList[i];
                 charGO[i].SetActive(true);
                 start += 4;
             }
