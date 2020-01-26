@@ -50,4 +50,11 @@ public class Station : MonoBehaviour
             }
         }
     }
+
+    public void CheckCargo() {
+        for (int i = 0; i < charGO.Count; i++)
+        {
+            
+        }
+    }
 }

@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     private bool isOccupying = false;
     private Vector3 cargoPos;
     private Cargo cargo;
+    private Camera mainCam;
 
     public Vector3 StationPos { get => stationPos; set => stationPos = value; }
     public string Letter { get => letter; set => letter = value; }
@@ -27,10 +28,14 @@ public class Character : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void Start() {
+        mainCam = Camera.main;
+    }
+
     private void OnEnable()
     {
         transform.position = stationPos;
-        characterHolder.text = letter.ToString();
+        characterHolder.text = letter;
     }
 
     // Update is called once per frame
@@ -38,7 +43,7 @@ public class Character : MonoBehaviour
     {
         if (isHeld)
         {
-            transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
+            transform.position = new Vector3(mainCam.ScreenToWorldPoint(Input.mousePosition).x, mainCam.ScreenToWorldPoint(Input.mousePosition).y, 0f);
         }
     }
 
@@ -53,5 +58,9 @@ public class Character : MonoBehaviour
         {
             transform.position = cargoPos;
         }
+    }
+
+    public bool CheckLetter(string control) {
+        return letter == control;
     }
 }

@@ -49,7 +49,7 @@ public class CharacterInput : MonoBehaviour
             }
         }
 #endif
-
+/*
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
         {
@@ -73,6 +73,7 @@ public class CharacterInput : MonoBehaviour
 
         else if (Input.touchCount <= 0)
         {
+            Debug.Log("Put down");
             if (isHolding)
             {
                 isHolding = false;
@@ -80,5 +81,6 @@ public class CharacterInput : MonoBehaviour
             }
         }
 #endif
+*/
     }
 }
