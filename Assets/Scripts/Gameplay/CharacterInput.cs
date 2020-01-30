@@ -17,6 +17,7 @@ public class CharacterInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         #if UNITY_EDITOR
 
         if(Input.GetMouseButtonDown(0))
@@ -48,8 +49,8 @@ public class CharacterInput : MonoBehaviour
                 heldCharacter = null;
             }
         }
-#endif
-/*
+#endif*/
+
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
         {
@@ -81,6 +82,6 @@ public class CharacterInput : MonoBehaviour
             }
         }
 #endif
-*/
+
     }
 }
