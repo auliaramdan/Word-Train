@@ -49,8 +49,8 @@ public class CharacterInput : MonoBehaviour
                 heldCharacter = null;
             }
         }
-#endif*/
-
+#endif
+*/
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
         {

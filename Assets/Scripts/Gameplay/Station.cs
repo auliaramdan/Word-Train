@@ -93,13 +93,13 @@ public class Station : MonoBehaviour
             }
 
         yield return new WaitForSeconds(3);
-        levelIndex += levelIndex + 1 > levelIndex.Count - 1? 0 : 1;
+        levelIndex += levelIndex + 1 >= levelList.Count? 0 : 1;
         charList = levelList[levelIndex];
         for (int i = 0; i < cargo.Count; i++)
         {
             cargo[i].GetComponent<Animator>().SetTrigger("Restart");
         }
-        for (int i = 0; i < charList.charList.Count; i++)
+        for (int i = 0; i < charGO.Count; i++)
         {
             charGO[i].SetActive(false);
         }
