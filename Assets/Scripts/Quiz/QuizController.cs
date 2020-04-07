@@ -47,8 +47,7 @@ public class QuizController : MonoBehaviour
         ShuffleAnswer(ref shuffleIndex);
 
         for (int i = 0; i < answerToggles.Length; i++)
-        {
-            answerToggles[i].isOn = false;
+        {            
             Toggle temp = answerToggles[i];
             answerToggles[i] = answerToggles[shuffleIndex[i]];
             answerToggles[shuffleIndex[i]] = temp;
@@ -60,13 +59,21 @@ public class QuizController : MonoBehaviour
         {
             answerToggles[i].GetComponentInChildren<TextMeshProUGUI>().text = question.wrongAnswers[i-1];
         }
+
+        for (int i = 0; i < answerToggles.Length; i++)
+        {
+            answerToggles[i].interactable = true;
+            answerToggles[i].isOn = false;
+        }
     }
 
     public void RevealAnswer() {
         for (int i = 0; i < answerToggles.Length; i++)
         {
+            answerToggles[i].interactable = false;
             if(answerToggles[i] == correctAnswerToggle) continue;
             answerToggles[i].GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
+        ServiceLocator.GetService<AudioManager>().Play("bell");
     }
 }

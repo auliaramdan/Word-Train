@@ -21,15 +21,16 @@ public class QuizManager : MonoBehaviour
     {
         if (controller.CorrectAnswerToggle.isOn) score++;
         questionIndex++;
-        StartCoroutine(NextQuestion());
+        controller.RevealAnswer();
+        //StartCoroutine(NextQuestion());
         
         //scoreHolder.text = score.ToString();
         //scorePanel.SetActive(true);
     }
 
-    private IEnumerator NextQuestion() {
-        controller.RevealAnswer();
-        yield return new WaitForSeconds(1);
+    public void NextQuestion() {
+        //controller.RevealAnswer();
+        //yield return new WaitForSeconds(1);
         if(questionIndex < questionList.Count) {
             controller.SetQuestion(questionList[questionIndex], questionIndex + 1);
         } else {

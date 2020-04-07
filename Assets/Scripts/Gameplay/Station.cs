@@ -85,14 +85,16 @@ public class Station : MonoBehaviour
     }
 
     private IEnumerator FinishTrain(){
+        ServiceLocator.GetService<AudioManager>().Play("train");
         yield return new WaitForSeconds(1);
         for (int i = 0; i < charList.charList.Count; i++)
             {
                 charGO[i].transform.SetParent(charGO[i].GetComponent<Character>().Cargo.transform);
                 cargo[i].GetComponent<Animator>().SetTrigger("Finish");
             }
-
+        
         yield return new WaitForSeconds(3);
+        ServiceLocator.GetService<AudioManager>().Stop("train");
         levelIndex += levelIndex + 1 >= levelList.Count? 0 : 1;
         charList = levelList[levelIndex];
         for (int i = 0; i < cargo.Count; i++)
@@ -103,6 +105,7 @@ public class Station : MonoBehaviour
         {
             charGO[i].SetActive(false);
         }
+        
         ArrangePieces();
     }
 
@@ -113,7 +116,7 @@ public class Station : MonoBehaviour
             cargo[i].transform.position = cargoInitialPos[i];
         }
 
-        int start = -6;
+        float start = -1.74f;
 
         for (int i = 0; i < charList.charList.Count; i++)
         {
@@ -123,7 +126,7 @@ public class Station : MonoBehaviour
 
             if(i%2 == 0)
             {
-                Vector3 tempPos = new Vector3(start, 3, 0);
+                Vector3 tempPos = new Vector3(start, 0.13f, 0);
                 Character tempChar = charGO[i].GetComponent<Character>();
                 tempChar.Cargo = null;
                 tempChar.SetHeld(false);
@@ -131,10 +134,11 @@ public class Station : MonoBehaviour
                 tempChar.StationPos = tempPos;
                 tempChar.Letter = charList.charList[i];
                 charGO[i].SetActive(true);
+                //start += 2.372f;
             }
             else
             {
-                Vector3 tempPos = new Vector3(start, 0, 0);
+                Vector3 tempPos = new Vector3(start, 2.282f, 0);
                 Character tempChar = charGO[i].GetComponent<Character>();
                 availablePositions.Add(tempPos);
                 tempChar.StationPos = tempPos;
@@ -142,7 +146,7 @@ public class Station : MonoBehaviour
                 tempChar.SetHeld(false);
                 tempChar.Letter = charList.charList[i];
                 charGO[i].SetActive(true);
-                start += 4;
+                start += 2.372f;
             }
         }
     }

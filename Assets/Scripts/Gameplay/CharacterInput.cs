@@ -17,7 +17,7 @@ public class CharacterInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         #if UNITY_EDITOR
 
         if(Input.GetMouseButtonDown(0))
@@ -49,9 +49,9 @@ public class CharacterInput : MonoBehaviour
                 heldCharacter = null;
             }
         }
-#endif
-*/
-#if UNITY_ANDROID
+
+
+#elif UNITY_ANDROID
         if (Input.touchCount > 0)
         {
             Ray ray = mainCam.ScreenPointToRay(Input.touches[0].position);
@@ -74,7 +74,7 @@ public class CharacterInput : MonoBehaviour
 
         else if (Input.touchCount <= 0)
         {
-            Debug.Log("Put down");
+            //Debug.Log("Put down");
             if (isHolding)
             {
                 isHolding = false;
